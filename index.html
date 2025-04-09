@@ -3,35 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Happy Birthday, [My Dear]!</title>
+  <title>Happy Birthday, Sicheng!</title>
+  <!-- Animate.css for simple animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
+    /* Base Styles */
     body {
-      background: #f9f9f9;
+      margin: 0;
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
     }
-    h1 {
-      color: #e91e63;
-    }
-    p {
-      font-size: 1.2em;
-    }
-    .message {
-      margin: 20px auto;
-      max-width: 600px;
+    header {
+      background: #e91e63;
+      color: #fff;
       padding: 20px;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
       background: #fff;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #e91e63;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    section {
+      margin-bottom: 40px;
+      background: #fff;
+      padding: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+    /* Photo Upload Form */
+    .upload-form input[type="file"] {
+      display: block;
+      margin: 10px auto;
+    }
+    .upload-form input[type="submit"] {
+      background: #e91e63;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+    /* Gallery Grid */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .gallery img {
+      max-width: 200px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     }
   </style>
 </head>
 <body>
-  <div class="message">
-    <h1>Happy Birthday, [Sicheng]!</h1>
-    <p>Wishing you a day filled with love, joy, and all your favorite things.</p>
-    <p>Love always, [Yujie Zhang]</p>
-  </div>
+  <!-- Header Section -->
+  <header class="animate__animated animate__fadeInDown">
+    <h1>Happy Birthday, Sicheng!</h1>
+    <p>With all my love, Yujie Zhang</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#message">Message</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#upload">Upload Photos</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Birthday Message Section -->
+    <section id="message" class="animate__animated animate__fadeInUp">
+      <h2>A Special Message for You</h2>
+      <p>
+        Dear Sicheng, on your special day, I want you to know how deeply you are loved and cherished. May your day be filled with joy, laughter, and wonderful memories.
+      </p>
+    </section>
+    
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="animate__animated animate__fadeInUp">
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <!-- Replace these placeholders with actual photos or integrate a dynamic gallery later -->
+        <img src="https://via.placeholder.com/200x150?text=Photo+1" alt="Photo 1">
+        <img src="https://via.placeholder.com/200x150?text=Photo+2" alt="Photo 2">
+        <img src="https://via.placeholder.com/200x150?text=Photo+3" alt="Photo 3">
+      </div>
+    </section>
+    
+    <!-- Photo Upload Section -->
+    <section id="upload" class="animate__animated animate__fadeInUp">
+      <h2>Upload Your Photos</h2>
+      <p>
+        This section is for private photo uploads. (Note: To enable private uploads, integrate a secure backend service like Firebase Storage or a serverless function for file handling.)
+      </p>
+      <form class="upload-form" method="post" enctype="multipart/form-data">
+        <input type="file" name="photo" accept="image/*">
+        <input type="submit" value="Upload">
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="animate__animated animate__fadeInUp">
+    <p>&copy; 2025 Yujie Zhang. All rights reserved.</p>
+  </footer>
 </body>
 </html>
